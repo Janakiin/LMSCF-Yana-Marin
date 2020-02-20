@@ -15,19 +15,19 @@ Gender preference (e.g. man looking for man or man looking for woman, or woman l
 
 ## 2. Data Structure (Must have)
 - Object class with person with the attributes:
--- Name: string
--- Age: number
--- Phrase: string
--- Photo: string
--- Location: sting
--- Hobbies: string
--- Favorite Music: string
+    - Name: string
+    - Age: number
+    - Phrase: string
+    - Photo: string
+    - Location: sting
+    - Hobbies: string
+    - Favorite Music: string
 
 We realize that the use of subclasses for this exercise might be considered redundant, but we want to meet the stated objective of practicing the use of subclasses for objects as well. Therefore we need *two subclasses*:
 - Man
 - Woman
 ...with the only additional attribute per subclass:
--- Favorite: boolean
+    - Favorite: boolean
 
 ## 3. Technologies
 - Bootstrap
