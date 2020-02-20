@@ -1,12 +1,13 @@
 describe("Test array output", function () {
-    it("checking the console for a specific outpu^t",
+    it("Should iterate through objects in array and output the names in the objects",
 
     function () {
 
         console.log = jasmine.createSpy("log");
 
-        iterateArray();
+
 
         expect(console.log).toHaveBeenCalledWith('Thomas');
     });
 });
+
