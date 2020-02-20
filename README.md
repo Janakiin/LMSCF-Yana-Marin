@@ -14,20 +14,20 @@ We could add a Jumbotron promotion at the top of the page.
 Gender preference (e.g. man looking for man or man looking for woman, or woman looking for man or woman looking for woman, or both).
 
 ## 2. Data Structure (Must have)
-- Object class with person with the attributes:
-    - Name: string
-    - Age: number
-    - Phrase: string
-    - Photo: string
-    - Location: sting
-    - Hobbies: string
-    - Favorite Music: string
+- Object class for *person* with the following attributes:
+    - *Name:* string
+    - *Age:* number
+    - *Phrase:* string
+    - *Photo:* string
+    - *Location:* sting
+    - *Hobbies:* string
+    - *Favorite Music:* string
 
 We realize that the use of subclasses for this exercise might be considered redundant, but we want to meet the stated objective of practicing the use of subclasses for objects as well. Therefore we need *two subclasses*:
 - Man
 - Woman
-...with the only additional attribute per subclass:
-    - Favorite: boolean
+...with the only additional attribute per subclass which we use for the "like" or "favorite" status:
+    - *Favorite:* boolean
 
 ## 3. Technologies
 - Bootstrap
