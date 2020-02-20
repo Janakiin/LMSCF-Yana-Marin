@@ -1,0 +1,36 @@
+Project Documentation
+Yana & Marin
+
+Version: 20th February 2020
+
+1. Goal
+Dating site with list of potential partners to choose from and favorite.
+
+1.1 User Experience
+Two Views:
+- A view with the potential partners as cards with a phrase and a photo. An option to favorite them by clicking on a heart.
+- Another view with the favorites with a photo and their personal information.
+
+1.2 Nice to Have
+Jumbotron promotion at the top of the page.
+Gender preference (e.g. man looking for man or man looking for woman, or woman looking for man or woman looking for woman, or both).
+
+2. Data Structure
+- Object class with person.
+	Name: string
+	Age: number
+	Phrase: string
+	Photo: string
+	Location: sting
+	Hobbies: string
+	Favorite Music: string
+
+Two subclasses:
+- Man
+- Woman.
+	Favorite: boolean
+
+3. Technologies
+- Bootstrap
+- jQuery
+- TypeScript
