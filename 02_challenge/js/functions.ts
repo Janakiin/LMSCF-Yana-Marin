@@ -34,14 +34,15 @@ class Woman extends Person {
     return `
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
-          <img class="card-img-top" src="${this.photo}" alt="${this.name}">
+          <div class="relative">
+            <img class="card-img-top" src="${this.photo}" alt="${this.name}">
+            <div class="absolute">
+              <img src="img/heart-${this.favorite}.png" onclick="addFavorite(${this.id})" class="img-fluid peopleHeart">
+            </div>
+          </div>
           <div class="card-body">
             <h4 class="card-title">${this.name}</h4>
             <p class="card-text">${this.phrase}</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary" onclick="addFavorite(${this.id})">Favorite!</a>
-            <p><img src="img/heart-${this.favorite}.png" width="20px"></p>
           </div>
         </div>
       </div>
@@ -51,17 +52,18 @@ class Woman extends Person {
     return `
       <div class="col-lg-6 col-md-6 mb-4">
         <div class="card h-100">
-          <img class="card-img-top" src="${this.photo}" alt="${this.name}">
+          <div class="relative">
+            <img class="card-img-top" src="${this.photo}" alt="${this.name}">
+            <div class="absolute">
+              <img src="img/heart-${this.favorite}.png" onclick="addFavorite(${this.id})" class="img-fluid favoritesHeart">
+            </div>
+          </div>
           <div class="card-body">
             <h4 class="card-title">Name: ${this.name}</h4>
             <p class="card-text">Age: ${this.age}</p>
             <p class="card-text">Location: ${this.location}</p>
             <p class="card-text">Hobbies: ${this.hobbies}</p>
             <p class="card-text">Favorite Music: ${this.favorite_music}</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary" onclick="addFavorite(${this.id})">Favorite!</a>
-            <p><img src="img/heart-${this.favorite}.png" width="20px"></p>
           </div>
         </div>
       </div>
@@ -82,14 +84,15 @@ class Man extends Person {
     return `
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
-          <img class="card-img-top" src="${this.photo}" alt="${this.name}">
+          <div class="relative">
+            <img class="card-img-top" src="${this.photo}" alt="${this.name}">
+            <div class="absolute">
+              <img src="img/heart-${this.favorite}.png" onclick="addFavorite(${this.id})" class="img-fluid peopleHeart">
+            </div>
+          </div>
           <div class="card-body">
             <h4 class="card-title">${this.name}</h4>
             <p class="card-text">${this.phrase}</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary" onclick="addFavorite(${this.id})">Favorite!</a>
-            <p><img src="img/heart-${this.favorite}.png" width="20px"></p>
           </div>
         </div>
       </div>
@@ -100,17 +103,18 @@ class Man extends Person {
     return `
       <div class="col-lg-6 col-md-6 mb-4">
         <div class="card h-100">
-          <img class="card-img-top" src="${this.photo}" alt="${this.name}">
+          <div class="relative">
+            <img class="card-img-top" src="${this.photo}" alt="${this.name}">
+            <div class="absolute">
+              <img src="img/heart-${this.favorite}.png" onclick="addFavorite(${this.id})" class="img-fluid favoritesHeart">
+            </div>
+          </div>
           <div class="card-body">
             <h4 class="card-title">Name: ${this.name}</h4>
             <p class="card-text">Age: ${this.age}</p>
             <p class="card-text">Location: ${this.location}</p>
             <p class="card-text">Hobbies: ${this.hobbies}</p>
             <p class="card-text">Favorite Music: ${this.favorite_music}</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary" onclick="addFavorite(${this.id})">Favorite!</a>
-            <p><img src="img/heart-${this.favorite}.png" width="20px"></p>
           </div>
         </div>
       </div>
@@ -152,13 +156,11 @@ function addFavorite(id) {
 function generateFavorites() {
   let favoriteContent: string = '';
   for (let tempID in personArray) {
-    console.log('Foo! Outside the IF statement');
     if (personArray[tempID].favorite == true) {
-      console.log('Foo! Inside the IF statement');
       favoriteContent += personArray[tempID].personDetails();
     }
   };
-  $('#favoritesContainer').replaceWith(`<div class="row text-center mt-5" id="personContainer">${favoriteContent}</div>`);
+  $('#favoritesContainer').replaceWith(`<div class="row text-center py-2" id="favoritesContainer">${favoriteContent}</div>`);
 }
 
 
